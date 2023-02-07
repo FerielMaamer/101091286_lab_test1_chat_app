@@ -71,11 +71,6 @@ io.on('connection', (socket) => {
         })
 
     })
-    /* socket.on('get-messages-history', room_id => {
-        Message.find({ room_id }).then(result => {
-            socket.emit('output-messages', result)
-        })
-    }) */
     socket.on('disconnect', () => {
         const user = removeUser(socket.id);
     })
